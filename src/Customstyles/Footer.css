@@ -1,0 +1,109 @@
+.Footer{
+    background-color: rgb(0, 51, 128);
+    color: white;
+}
+.col1{
+    cursor: pointer;
+    margin-top: 15px;
+}
+.proCat{
+    font-weight: 700;
+}
+.colPara{
+    font-size: 15px;
+}
+.colDiv{
+    line-height: 17px;
+}
+.middle-footer{
+    padding: 0.5rem;
+    justify-content: center;
+}
+.middle-content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -2%;
+    gap: 0.5rem;
+}
+.follow{
+    width: 18%;
+    margin: auto;
+}
+.followP{
+    font-weight: 700;
+}
+.socialApp{
+    background: rgba(255, 255, 255, 0.92);
+    width: 30%;
+}
+.social-Content{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    background-color: rgb(0, 51, 128);
+    color: #FFFFFF;   
+}
+.cursor{
+    cursor: pointer;
+    margin-top: -10px;
+    margin-left: 5px;
+}
+.faclass{
+    font-size: 25px;
+}
+.AppIcon{
+    width: 72%;
+}
+.appP{
+    font-weight: 700;
+}
+.icons{
+    display: flex;
+    justify-content: left;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+.playStoreIcon{
+    object-fit: cover;
+    width: 11%;
+}
+.disclamir{
+    background-color: rgb(10, 36, 74);
+    padding: 0.5rem;
+}
+.disclamir-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 15px;
+    width: 5%;
+    margin: auto;
+    padding: 0.75rem;
+}
+.discl-P{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0.25rem;
+}
+.paragraph-disclamir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paraDetail{
+    font-size: 14px;
+    width: 92%;
+    margin: auto;
+    text-align: center;
+    padding: 0.25rem;
+}
+.rights{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rightsP{
+    font-size: 14px;
+    padding: 0.25rem;
+}

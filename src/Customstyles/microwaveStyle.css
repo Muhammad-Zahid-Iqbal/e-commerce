@@ -1,0 +1,98 @@
+.microWaveOvenParent{
+    margin-top: 0.25rem;
+}
+.swiper-oven{
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+.swiper-wrapper-oven{
+    box-sizing: initial;
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.swiper-slider-oven{
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+    width: 232.4px;
+    margin-right: 30px;
+}
+#aLinkOven{
+    text-decoration: none;
+}
+.swiper-content-oven{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin: auto;
+}
+.imgOvenClass{
+    width: 160px;
+    height: 160px;
+}
+.swiper-title-oven{
+    padding: 0.5rem;
+}
+.para-oven{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.details-oven{
+    margin-top: -25px;
+    color: black;
+}
+.dPrice-oven{
+    display: flex;
+    margin-top: -15px;
+}
+.dealPrice-oven{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.p1-oven{
+    margin: 0px;
+}
+.p2-oven{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 0.25rem;
+    margin-top: 15px;
+}
+.mrp-oven{
+    color: #4A5568;
+    font-size: 14px;
+}
+.mrpS-oven{
+    color: #4A5568;
+    font-size: 14px;
+    margin-left: 0.25rem;
+}
+.offers-oven{
+    width: 40%;
+    color: #38A169;
+    margin-top: 0.5rem;
+    text-align: center;
+    border-radius: 0.75rem;
+    border: 1px solid black;
+    background: #F0FFF4;
+}
+.offer-p-oven{
+    font-size: 11px;
+    margin: 0;
+}
