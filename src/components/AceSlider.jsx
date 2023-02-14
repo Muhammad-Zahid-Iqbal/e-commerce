@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import axios from "axios";
+import React, { Component, useEffect, useState } from "react";
 import Slider from "react-slick";
-import { AceApi} from "../data";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -24,13 +24,19 @@ function SampleNextArrow(props) {
     );
   }
 
-export default class AceSlider extends Component {
-  state = {
+export default function AceSlider() {
+  const [myState, setState] = useState([]);
+
+  useEffect(()=>{
+      const res = axios.get("https://rus-digital-televisions.onrender.com/homeappliances")
+      .then(res=>setState(res.data));
+  },[]);
+  const state = {
     display: true,
     width: 820
   };
   
-  render() {
+   {
     const settings = {
       dots: false,
       infinite: true,
@@ -45,12 +51,12 @@ export default class AceSlider extends Component {
       <div>
         <div
           style={{
-            width: this.state.width + "px",
-            display: this.state.display ? "block" : "none"
+            width: state.width + "px",
+            display: state.display ? "block" : "none"
           }}
         >
           <Slider {...settings}>
-            {AceApi.map((value,ind)=>{
+            {myState.map((value,ind)=>{
                 return <div key={ind}>
             <div className="ComputersClass" id="ComputerId">
                 <div className="swiper">

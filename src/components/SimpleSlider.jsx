@@ -1,8 +1,15 @@
-import React,{Component} from 'react'
+import axios from 'axios';
+import React,{Component, useEffect, useState} from 'react'
 import Slider from "react-slick";
-import { Computers } from '../data';
+// import { Computers } from '../data';
 
 export default function SimpleSlider() {
+    const [myState, setState] = useState([]);
+
+    useEffect(()=>{
+        const res = axios.get("https://rus-digital-televisions.onrender.com/computers")
+        .then(res=>setState(res.data));
+    },[])
     
       const settings = {
         dots: false,
@@ -16,7 +23,7 @@ export default function SimpleSlider() {
       return (
         <div>
           <Slider {...settings}>
-          {Computers.map((value,ind)=>{
+          {myState.map((value,ind)=>{
             
           return <div key={ind}>
           <div className='ComputersClass'>

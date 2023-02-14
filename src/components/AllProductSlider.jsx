@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import axios from "axios";
+import React, { Component, useEffect, useState } from "react";
 import Slider from "react-slick";
 import '../Customstyles/microwaveStyle.css';
-import { AllProductSliderApi } from "../data";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -25,10 +25,15 @@ function SampleNextArrow(props) {
     );
   }
 
-export default class AllProductSlider extends Component {
-   
+export default function AllProductSlider() {
+  const [myState, setState] = useState([]);
 
-  render() {
+  useEffect(()=>{
+      const res = axios.get("https://rus-digital-televisions.onrender.com/allproduct")
+      .then(res=>setState(res.data));
+  },[]);
+
+   {
     const settings = {
       dots: false,
       infinite: true,
@@ -42,7 +47,7 @@ export default class AllProductSlider extends Component {
     return (
       <div>
         <Slider {...settings}>
-            {AllProductSliderApi.map((value, ind)=>{
+            {myState.map((value, ind)=>{
 
             return <div key={ind}>
           <div className="microWaveOvenParent">

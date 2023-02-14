@@ -1,3 +1,10 @@
+#contactUSID{
+    text-decoration: none;
+}
+#contactUSID:hover{
+    text-decoration: underline;
+    color: white;
+}
 .TrendingLaptop{
     width: 95%;
     margin-right: auto;

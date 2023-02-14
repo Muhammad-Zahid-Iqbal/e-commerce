@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import axios from "axios";
+import React, { Component, useEffect, useState } from "react";
 import Slider from "react-slick";
-import { Computers} from "../data";
+// import { Computers} from "../data";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -24,13 +25,20 @@ function SampleNextArrow(props) {
     );
   }
 
-export default class ITAccessoriesSlider extends Component {
-  state = {
+export default function ITAccessoriesSlider(){
+  const [myState, setState] = useState([]);
+
+  useEffect(()=>{
+      const res = axios.get("https://rus-digital-televisions.onrender.com/computers")
+      .then(res=>setState(res.data));
+  },[]);
+
+  const state = {
     display: true,
     width: 820
   };
   
-  render() {
+   {
     const settings = {
       dots: false,
       infinite: true,
@@ -45,12 +53,12 @@ export default class ITAccessoriesSlider extends Component {
       <div>
         <div
           style={{
-            width: this.state.width + "px",
-            display: this.state.display ? "block" : "none"
+            width: state.width + "px",
+            display:state.display ? "block" : "none"
           }}
         >
           <Slider {...settings}>
-            {Computers.map((value,ind)=>{
+            {myState.map((value,ind)=>{
                 return <div key={ind}>
             <div className="ComputersClass" id="ComputerId">
                 <div className="swiper">

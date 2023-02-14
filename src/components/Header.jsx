@@ -2,6 +2,7 @@ import { hover } from '@testing-library/user-event/dist/hover';
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import img from '../images/logo.png';
+import { Link } from 'react-router-dom';
 
 
 const Container =styled.div`
@@ -197,7 +198,6 @@ const televisionDropChild =styled.div`
 const Header = () => {
 
     const [toggle, setToggle] = useState("hideNav");
-    console.log(toggle);
 
     const toggleNav = () => {
 
@@ -241,12 +241,12 @@ const Header = () => {
                 <i className="fa-solid text-light fa-location-dot"></i>
                 <HeadH2>UNMATCHED NETWORK</HeadH2>
             </AllBrandListStyle>
-            <a href='#'>
+            <Link to="/ContactUs" id='contactUSID'>
                 <AllBrandListStyle>
                 <i className="fa fa-solid fa-mobile text-white"></i>
                 <HeadH2>Contact Us</HeadH2>
                 </AllBrandListStyle>
-            </a>
+            </Link>
         </TopLinks>
 
 
@@ -269,19 +269,19 @@ const Header = () => {
                 <HeadH5>Deliver to Mumbai 400059</HeadH5>
             </Mumbai>
 
-            <a href='#' className='cartLink'>
+            <Link to='/Cart' className='cartLink'>
                 <ShoppingCart>
                     <i className="fa cart text-white fa-cart-shopping"></i>
                     <HeadH4>Cart</HeadH4>
                 </ShoppingCart>
-            </a>
+            </Link>
 
 
             <Login>
             <i className="fa cart text-white fa-up-right-from-square"></i>
-            <a href='#' className='LoginLink'>
+            <Link to='/Login' className='LoginLink'>
                 <HeadH3>Login</HeadH3>
-            </a>
+            </Link>
             </Login>
         </SearchArea>
 
